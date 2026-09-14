@@ -1,0 +1,27 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Samsara BLE SDK — Maven repository</title>
+<style>
+  body { font: 15px/1.6 system-ui, sans-serif; max-width: 42rem; margin: 4rem auto; padding: 0 1.5rem; }
+  pre { background: #f4f4f5; padding: 1rem; overflow-x: auto; border-radius: 6px; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+</style>
+<h1>Samsara BLE SDK — Maven repository</h1>
+<p>
+  This branch serves the Android artifacts for
+  <a href="https://github.com/samsarahq/samsara-network-ble">samsara-network-ble</a>.
+  It is a static Maven repository, not a website.
+</p>
+<pre><code>repositories {
+    maven { url = uri("https://samsarahq.github.io/samsara-network-ble/maven") }
+    google()
+    mavenCentral()
+}
+
+dependencies {
+    implementation("com.samsara.ble:samsara-ble-sdk:0.1.0")
+}</code></pre>
+<p>
+  See the <a href="https://github.com/samsarahq/samsara-network-ble">repository</a>
+  for integration docs, the license, and third-party notices.
+</p>

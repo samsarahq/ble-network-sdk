@@ -1,0 +1,118 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.samsara.ble",
+    "module": "samsara-ble-sdk",
+    "version": "0.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.7.0"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseVariantReleaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.4.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "samsara-ble-sdk-0.1.0.aar",
+          "url": "samsara-ble-sdk-0.1.0.aar",
+          "size": 1749325,
+          "sha512": "7786a72a0ef3698e91cf0d3b0644723eee4205cadf0fbb759aa19d3cb679779ab2d1613007383beccf1ae835d2102c1c2d0f4363e8871a298a024c7bcb95287e",
+          "sha256": "cc7172f68d5b9dd70c8033c2edb0641a3b2c720ee15cece3c84cb3b616cdcf08",
+          "sha1": "07aecddecbafe520b61bc64dd6ba8d4fefaccc64",
+          "md5": "37f59b1c1424114bc96596d820731950"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantReleaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "androidx.core",
+          "module": "core",
+          "version": {
+            "requires": "1.17.0"
+          }
+        },
+        {
+          "group": "com.google.android.gms",
+          "module": "play-services-location",
+          "version": {
+            "requires": "21.0.0"
+          }
+        },
+        {
+          "group": "com.google.android.gms",
+          "module": "play-services-base",
+          "version": {
+            "requires": "18.0.0"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlinx",
+          "module": "kotlinx-coroutines-android",
+          "version": {
+            "requires": "1.11.0"
+          }
+        },
+        {
+          "group": "androidx.annotation",
+          "module": "annotation",
+          "version": {
+            "requires": "1.10.0"
+          }
+        },
+        {
+          "group": "androidx.room",
+          "module": "room-runtime",
+          "version": {
+            "requires": "2.8.4"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "2.4.10"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "samsara-ble-sdk-0.1.0.aar",
+          "url": "samsara-ble-sdk-0.1.0.aar",
+          "size": 1749325,
+          "sha512": "7786a72a0ef3698e91cf0d3b0644723eee4205cadf0fbb759aa19d3cb679779ab2d1613007383beccf1ae835d2102c1c2d0f4363e8871a298a024c7bcb95287e",
+          "sha256": "cc7172f68d5b9dd70c8033c2edb0641a3b2c720ee15cece3c84cb3b616cdcf08",
+          "sha1": "07aecddecbafe520b61bc64dd6ba8d4fefaccc64",
+          "md5": "37f59b1c1424114bc96596d820731950"
+        }
+      ]
+    }
+  ]
+}
