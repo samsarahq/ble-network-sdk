@@ -9,7 +9,7 @@ monorepo; each release is published here.
 | Platform | Status | Artifact |
 | --- | --- | --- |
 | Android | Available | `com.samsara.ble:samsara-ble-sdk`, served from this repo's Maven repository |
-| iOS | Not yet published | A prebuilt `SamsaraBLE.xcframework` will be attached to a future release |
+| iOS | Available | A prebuilt `SamsaraBLE.xcframework`, attached to each GitHub Release and resolved by Swift Package Manager |
 
 ## Android
 
@@ -88,13 +88,69 @@ Log.i("samsara", SamsaraBleSDK.getDiagnostics().toMap().toString())
 The SDK does not scan in the background and starts no services. Scanning stops
 when your app leaves the foreground.
 
+## iOS
+
+### Requirements
+
+- iOS 15+
+- Xcode 15+ / Swift 5.9+
+
+### Add the package
+
+The SDK ships as a **prebuilt binary framework**. Nothing of ours compiles in
+your build, and there are no transitive packages to resolve.
+
+Xcode: **File → Add Package Dependencies…** and use
+
+```
+https://github.com/samsarahq/samsara-network-ble.git
+```
+
+Choose product **SamsaraBLE**.
+
+Or in a `Package.swift`:
+
+```swift
+.package(
+    url: "https://github.com/samsarahq/samsara-network-ble.git",
+    .upToNextMinor(from: "0.1.0")
+)
+// .product(name: "SamsaraBLE", package: "samsara-network-ble")
+```
+
+While the SDK is `0.x`, pin with `.upToNextMinor`. `from:` means up-to-next-major,
+which would let a breaking `0.x` release in.
+
+### Permissions
+
+As on Android, the SDK declares nothing itself and reports what is missing. You
+add the usage descriptions your app needs (`NSBluetoothAlwaysUsageDescription`,
+`NSLocationWhenInUseUsageDescription`) and own the prompts.
+
+### Quick start
+
+```swift
+import SamsaraBLE
+
+SamsaraBleSDK.shared.initialize(config: SamsaraConfig(apiKey: "…"))
+
+for group in SamsaraBleSDK.shared.capabilities.getMissingPermissionGroups() { /* request */ }
+let result = SamsaraBleSDK.shared.startScanning()
+```
+
+### Scanning is foreground-only
+
+Same as Android: no background scanning, no services.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
 
 ## Third-party notices
 
-See [THIRD_PARTY_NOTICES-android.txt](THIRD_PARTY_NOTICES-android.txt).
+Per platform, because the two ship different components:
+[THIRD_PARTY_NOTICES-android.txt](THIRD_PARTY_NOTICES-android.txt) and
+[THIRD_PARTY_NOTICES-ios.txt](THIRD_PARTY_NOTICES-ios.txt).
 
 The Android library statically compiles in Nordic Semiconductor's
 Kotlin-BLE-Library and Kotlin-Util-Library (BSD-3-Clause) and Samsara's own
@@ -103,6 +159,11 @@ notices must travel with it. The AAR carries them as an asset at
 `assets/samsara-ble-sdk/THIRD_PARTY_NOTICES.txt`, which the Android Gradle
 Plugin merges into your APK — surfacing them in an "Open source licenses"
 screen satisfies the obligation.
+
+The iOS XCFramework statically links Nordic's IOS-BLE-Library (BSD-3-Clause) and
+the same statechart runtime. Those notices travel in the framework's zip
+alongside the binary; a future release will move them inside the framework with
+an API to read them, matching Android.
 
 ## Support
 
