@@ -13,7 +13,7 @@
   <packaging>aar</packaging>
   <name>Samsara BLE SDK</name>
   <description>BLE scanning and device connectivity for Samsara hardware.</description>
-  <url>https://github.com/samsarahq/samsara-network-ble</url>
+  <url>https://github.com/samsarahq/ble-network-sdk</url>
   <licenses>
     <license>
       <name>MIT License</name>
@@ -29,9 +29,9 @@
     </developer>
   </developers>
   <scm>
-    <connection>scm:git:git://github.com/samsarahq/samsara-network-ble.git</connection>
-    <developerConnection>scm:git:ssh://github.com:samsarahq/samsara-network-ble.git</developerConnection>
-    <url>https://github.com/samsarahq/samsara-network-ble</url>
+    <connection>scm:git:git://github.com/samsarahq/ble-network-sdk.git</connection>
+    <developerConnection>scm:git:ssh://github.com:samsarahq/ble-network-sdk.git</developerConnection>
+    <url>https://github.com/samsarahq/ble-network-sdk</url>
   </scm>
   <dependencies>
     <dependency>
