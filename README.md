@@ -39,7 +39,7 @@ dependencyResolutionManagement {
 ```kotlin
 // build.gradle.kts
 dependencies {
-    implementation("com.samsara.ble:samsara-ble-sdk:0.1.0")
+    implementation("com.samsara.ble:samsara-ble-sdk:0.1.1")
 }
 ```
 
@@ -113,7 +113,7 @@ Or in a `Package.swift`:
 ```swift
 .package(
     url: "https://github.com/samsarahq/ble-network-sdk.git",
-    .upToNextMinor(from: "0.1.0")
+    .upToNextMinor(from: "0.1.1")
 )
 // .product(name: "SamsaraBLE", package: "ble-network-sdk")
 ```
