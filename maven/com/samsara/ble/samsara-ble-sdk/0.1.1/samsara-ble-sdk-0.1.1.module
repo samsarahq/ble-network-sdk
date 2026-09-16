@@ -3,7 +3,7 @@
   "component": {
     "group": "com.samsara.ble",
     "module": "samsara-ble-sdk",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -33,13 +33,13 @@
       ],
       "files": [
         {
-          "name": "samsara-ble-sdk-0.1.0.aar",
-          "url": "samsara-ble-sdk-0.1.0.aar",
-          "size": 1749310,
-          "sha512": "faa6c8da056c8ab73301aa4c1cac578b74a2be0503dd3845db725642f3a08cdf55b6099e53b067f26376c7244a273710e3e1be359787c022f7ca5418dde4517f",
-          "sha256": "85a2245d964d527c20e16763d2288c493f36601009444e1f8a9f2c8dab7dc668",
-          "sha1": "7cd03e7826e4f4e859bdd0cd022d6691dc8e086c",
-          "md5": "7f478e352032a0f3d26c859d2ec8c9d6"
+          "name": "samsara-ble-sdk-0.1.1.aar",
+          "url": "samsara-ble-sdk-0.1.1.aar",
+          "size": 1750388,
+          "sha512": "31f6ca47c9febc9253d421ac38a8d77832e4be7b6049ca444e2b11b75983e1f5240153e9197e53bdbb888aeb2108f1e7cde056b29c32ef0513fec11461d7daa5",
+          "sha256": "28c8ff3082cac435d57c473c99ba1de9e534b6a05935ffad507e47f8907afc63",
+          "sha1": "1f40b1272abf99c1a9253a4d6b6267b12c3743c2",
+          "md5": "92d0a4f26ab52c10af318968597dc389"
         }
       ]
     },
@@ -104,13 +104,13 @@
       ],
       "files": [
         {
-          "name": "samsara-ble-sdk-0.1.0.aar",
-          "url": "samsara-ble-sdk-0.1.0.aar",
-          "size": 1749310,
-          "sha512": "faa6c8da056c8ab73301aa4c1cac578b74a2be0503dd3845db725642f3a08cdf55b6099e53b067f26376c7244a273710e3e1be359787c022f7ca5418dde4517f",
-          "sha256": "85a2245d964d527c20e16763d2288c493f36601009444e1f8a9f2c8dab7dc668",
-          "sha1": "7cd03e7826e4f4e859bdd0cd022d6691dc8e086c",
-          "md5": "7f478e352032a0f3d26c859d2ec8c9d6"
+          "name": "samsara-ble-sdk-0.1.1.aar",
+          "url": "samsara-ble-sdk-0.1.1.aar",
+          "size": 1750388,
+          "sha512": "31f6ca47c9febc9253d421ac38a8d77832e4be7b6049ca444e2b11b75983e1f5240153e9197e53bdbb888aeb2108f1e7cde056b29c32ef0513fec11461d7daa5",
+          "sha256": "28c8ff3082cac435d57c473c99ba1de9e534b6a05935ffad507e47f8907afc63",
+          "sha1": "1f40b1272abf99c1a9253a4d6b6267b12c3743c2",
+          "md5": "92d0a4f26ab52c10af318968597dc389"
         }
       ]
     }
