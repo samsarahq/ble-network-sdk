@@ -39,7 +39,7 @@ dependencyResolutionManagement {
 ```kotlin
 // build.gradle.kts
 dependencies {
-    implementation("com.samsara.ble:samsara-ble-sdk:0.1.2")
+    implementation("com.samsara.ble:samsara-ble-sdk:0.2.0")
 }
 ```
 
@@ -70,10 +70,14 @@ SamsaraBleSDK.initialize(SamsaraConfig.Builder().apiKey("…").build())
 
 val result = SamsaraBleSDK.enableScanning()
 if (!result.didEnable) reportBlocked(result.failureReason, result.missingPermissions)
+
+// Optional: release when the host is done with the SDK for this session.
+SamsaraBleSDK.tearDown()
 ```
 
-The public surface is `initialize()`, `enableScanning()`, `disableScanning()`,
-`initializationState`, `getConfig()`, `getDiagnostics()`, and `capabilities`.
+The public surface is `initialize()`, `tearDown()`, `enableScanning()`,
+`disableScanning()`, `initializationState`, `getConfig()`, `getDiagnostics()`,
+and `capabilities`.
 
 `getDiagnostics()` returns a typed `SamsaraDiagnostics` — SDK version, init
 state, scanning flag, and a capabilities snapshot. Call `toMap()` for flat
@@ -83,6 +87,8 @@ strings in a log line or crash report:
 Log.i("samsara", SamsaraBleSDK.getDiagnostics().toMap().toString())
 ```
 
+`tearDown()` releases the current initialization (idempotent). Calling
+`initialize()` again also tears down first, so the last config wins.
 ### Scanning is foreground-only
 
 The SDK does not scan in the background and starts no services. Scanning stops
@@ -113,7 +119,7 @@ Or in a `Package.swift`:
 ```swift
 .package(
     url: "https://github.com/samsarahq/ble-network-sdk.git",
-    .upToNextMinor(from: "0.1.2")
+    .upToNextMinor(from: "0.2.0")
 )
 // .product(name: "SamsaraBLE", package: "ble-network-sdk")
 ```
@@ -136,8 +142,10 @@ SamsaraBleSDK.shared.initialize(config: SamsaraConfig(apiKey: "…"))
 
 for group in SamsaraBleSDK.shared.capabilities.getMissingPermissionGroups() { /* request */ }
 let result = SamsaraBleSDK.shared.enableScanning()
-```
 
+// Optional: release when the host is done with the SDK for this session.
+SamsaraBleSDK.shared.tearDown()
+```
 ### Scanning is foreground-only
 
 Same as Android: no background scanning, no services.
