@@ -39,7 +39,7 @@ dependencyResolutionManagement {
 ```kotlin
 // build.gradle.kts
 dependencies {
-    implementation("com.samsara.ble:samsara-ble-sdk:0.1.1")
+    implementation("com.samsara.ble:samsara-ble-sdk:0.1.2")
 }
 ```
 
@@ -50,7 +50,7 @@ merged manifest or your store listing. You declare the permissions for the
 capabilities you want, and the SDK reports what is missing.
 
 Scanning needs three: `BLUETOOTH_SCAN`, `BLUETOOTH_CONNECT`, and fine location.
-Coarse location alone is not enough — `startScanning()` refuses without fine.
+Coarse location alone is not enough — `enableScanning()` refuses without fine.
 `BLUETOOTH_CONNECT` is required even though the SDK never connects to a device;
 it shares the "Nearby devices" group with `BLUETOOTH_SCAN`, so it adds no extra
 prompt.
@@ -68,11 +68,11 @@ for (group in SamsaraBleSDK.capabilities.getMissingPermissionGroups()) { /* requ
 // Initialize at app launch.
 SamsaraBleSDK.initialize(SamsaraConfig.Builder().apiKey("…").build())
 
-val result = SamsaraBleSDK.startScanning()
-if (!result.didStart) reportBlocked(result.failureReason, result.missingPermissions)
+val result = SamsaraBleSDK.enableScanning()
+if (!result.didEnable) reportBlocked(result.failureReason, result.missingPermissions)
 ```
 
-The public surface is `initialize()`, `startScanning()`, `stopScanning()`,
+The public surface is `initialize()`, `enableScanning()`, `disableScanning()`,
 `initializationState`, `getConfig()`, `getDiagnostics()`, and `capabilities`.
 
 `getDiagnostics()` returns a typed `SamsaraDiagnostics` — SDK version, init
@@ -113,7 +113,7 @@ Or in a `Package.swift`:
 ```swift
 .package(
     url: "https://github.com/samsarahq/ble-network-sdk.git",
-    .upToNextMinor(from: "0.1.1")
+    .upToNextMinor(from: "0.1.2")
 )
 // .product(name: "SamsaraBLE", package: "ble-network-sdk")
 ```
@@ -135,7 +135,7 @@ import SamsaraBLE
 SamsaraBleSDK.shared.initialize(config: SamsaraConfig(apiKey: "…"))
 
 for group in SamsaraBleSDK.shared.capabilities.getMissingPermissionGroups() { /* request */ }
-let result = SamsaraBleSDK.shared.startScanning()
+let result = SamsaraBleSDK.shared.enableScanning()
 ```
 
 ### Scanning is foreground-only
