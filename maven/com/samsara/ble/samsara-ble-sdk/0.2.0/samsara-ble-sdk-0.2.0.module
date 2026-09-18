@@ -3,7 +3,7 @@
   "component": {
     "group": "com.samsara.ble",
     "module": "samsara-ble-sdk",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -33,13 +33,13 @@
       ],
       "files": [
         {
-          "name": "samsara-ble-sdk-0.1.2.aar",
-          "url": "samsara-ble-sdk-0.1.2.aar",
+          "name": "samsara-ble-sdk-0.2.0.aar",
+          "url": "samsara-ble-sdk-0.2.0.aar",
           "size": 1757817,
-          "sha512": "f245d820899ac143cc7572fd8630dd4d757c7445f3030b508b9e7a07a3933e489424a52ecaefc93e228021d2ec25684a089c6b780132c7bd2397bddc68d28522",
-          "sha256": "458ce06743b37427f987742fd1877f5110ab3d38661d322af2982d1272ba81f0",
-          "sha1": "34ecf4e05f9c7433c68d956aa63b1d97104fb136",
-          "md5": "689e40e36e4d06b930decbac08f2734b"
+          "sha512": "aad5da16aa5ed086f9178de9b2b36e8a3e0c9925a14db0b9f9ae82c86918c792a750e5a49173f30fac5d8f0dfee9be93e38b87e19ed54812747eba4d4d2feb0c",
+          "sha256": "15031d4074353e5c0683bb78baad33e2ebebd3eaefd2afa6e53735975b2c59cc",
+          "sha1": "44deb9a5386d49e721d591f5a44b62d7806da6ec",
+          "md5": "bcbcca453a9deb48b786b7c68d8085d9"
         }
       ]
     },
@@ -104,13 +104,13 @@
       ],
       "files": [
         {
-          "name": "samsara-ble-sdk-0.1.2.aar",
-          "url": "samsara-ble-sdk-0.1.2.aar",
+          "name": "samsara-ble-sdk-0.2.0.aar",
+          "url": "samsara-ble-sdk-0.2.0.aar",
           "size": 1757817,
-          "sha512": "f245d820899ac143cc7572fd8630dd4d757c7445f3030b508b9e7a07a3933e489424a52ecaefc93e228021d2ec25684a089c6b780132c7bd2397bddc68d28522",
-          "sha256": "458ce06743b37427f987742fd1877f5110ab3d38661d322af2982d1272ba81f0",
-          "sha1": "34ecf4e05f9c7433c68d956aa63b1d97104fb136",
-          "md5": "689e40e36e4d06b930decbac08f2734b"
+          "sha512": "aad5da16aa5ed086f9178de9b2b36e8a3e0c9925a14db0b9f9ae82c86918c792a750e5a49173f30fac5d8f0dfee9be93e38b87e19ed54812747eba4d4d2feb0c",
+          "sha256": "15031d4074353e5c0683bb78baad33e2ebebd3eaefd2afa6e53735975b2c59cc",
+          "sha1": "44deb9a5386d49e721d591f5a44b62d7806da6ec",
+          "md5": "bcbcca453a9deb48b786b7c68d8085d9"
         }
       ]
     }
